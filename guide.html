@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>目录 | hwd</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.35bcedcf.css" as="style"><link rel="preload" href="/assets/js/app.fd2331f4.js" as="script"><link rel="preload" href="/assets/js/2.103ad6f2.js" as="script"><link rel="preload" href="/assets/js/9.8515d22d.js" as="script"><link rel="prefetch" href="/assets/js/3.5d582e3c.js"><link rel="prefetch" href="/assets/js/4.d6cdcb57.js"><link rel="prefetch" href="/assets/js/5.765f9924.js"><link rel="prefetch" href="/assets/js/6.8779df89.js"><link rel="prefetch" href="/assets/js/7.d9d133a5.js"><link rel="prefetch" href="/assets/js/8.c849e03b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35bcedcf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="logo.png" alt="hwd" class="logo"> <span class="site-name can-hide">hwd</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/.html#" class="nav-link">
+  External
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  about
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/.html#" class="nav-link">
+  External
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  about
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>目录</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide.html#一、项目测试目录说明" class="sidebar-link">一、项目测试目录说明</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide.html#二、单元测试命令说明" class="sidebar-link">二、单元测试命令说明</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide.html#三、项目要求说明" class="sidebar-link">三、项目要求说明</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide.html#四、项目分层说明" class="sidebar-link">四、项目分层说明</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide.html#五、分层解释" class="sidebar-link">五、分层解释</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="目录"><a href="#目录" class="header-anchor">#</a> 目录</h1> <h2 id="一、项目测试目录说明"><a href="#一、项目测试目录说明" class="header-anchor">#</a> 一、项目测试目录说明</h2> <p>【强制】src/test/java/...项目或者模块包基本路径/integrationtest   集成测试目录，在这个目录下，放具体的包及测试类，类名以 &quot;IntTest&quot;结尾，表示这是集成测试。
+【强制】src/test/java/...项目或者模块包基本路径/spec   单元测试目录，在这个目录下，放具体的包及单元测试类，类名以 &quot;Spec&quot;结尾，遵循TDD规范。</p> <h2 id="二、单元测试命令说明"><a href="#二、单元测试命令说明" class="header-anchor">#</a> 二、单元测试命令说明</h2> <div class="language- extra-class"><pre class="language-text"><code>mvn install  生成测试覆盖率报告（报告目录：target/site/jacoco/index.html）
+
+mvn test 运行单元测试
+
+mvn integration-test  运行集成测试
+
+mvn verify 运行集成测试
+</code></pre></div><h2 id="三、项目要求说明"><a href="#三、项目要求说明" class="header-anchor">#</a> 三、项目要求说明</h2> <div class="language- extra-class"><pre><code> 1、整体测试覆盖率不低于70%，核心模块测试覆盖率不低于80%
+ 2、要求每层接口出入参 xxRspxx、ReqParam 放在每层的bean下；
+ 3、建议每层有自己的出入参数类；
+ 4、要求config constants enums exception util放到common层，特殊情况需要说明；
+ 5、禁止项目中使用json、object、map作为出入参；
+ 6、禁止底层模块依赖高层模块。
+</code></pre></div><h2 id="四、项目分层说明"><a href="#四、项目分层说明" class="header-anchor">#</a> 四、项目分层说明</h2> <div class="language-$xslt extra-class"><pre class="language-text"><code>&lt;modules&gt;
+   &lt;module&gt;shopping-guider-common&lt;/module&gt;      第一层：config constants enums exception util
+  
+   &lt;module&gt;shopping-guider-dao&lt;/module&gt;         第二层：feign messagebus.producer mysql
+  
+   &lt;module&gt;shopping-guider-mgr&lt;/module&gt;         第三层：impl bean
+  
+   &lt;module&gt;shopping-guider-domain&lt;/module&gt;      第四层：impl bean
+  
+   &lt;module&gt;shopping-guider-service&lt;/module&gt;     第五层：impl bean eventbus
+  
+   &lt;module&gt;shopping-guider-controller&lt;/module&gt;  第六层：controller messagebus.consumer job aop dto filter
+&lt;/modules&gt;
+</code></pre></div><h2 id="五、分层解释"><a href="#五、分层解释" class="header-anchor">#</a> 五、分层解释</h2> <div class="language- extra-class"><pre><code> 1、dao：属于基础设施层数据访问层，主要通过网络操作数据（feign，messagebus.producer，mysql）等。
+ 2、mgr：在领域中没有实际意义，此层存在的意义是对dao层简单的封装和调用，隔离domain层与dao层之间的耦合，也可理解为防腐层，将出参转化为更贴近自己项目的领域对象。
+ 3、domain：领域服务，一般在设计的时候就已经能确定有哪几个核心域了，在这层创建对应的领域服务即可。
+ 4、service：应用服务层，每一个方法可以讲述本服务的一个完整的用户故事。
+ 5、controller：展示层／接口层</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2022年4月23日星期六晚上7点37分</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fd2331f4.js" defer></script><script src="/assets/js/2.103ad6f2.js" defer></script><script src="/assets/js/9.8515d22d.js" defer></script>
+  </body>
+</html>
